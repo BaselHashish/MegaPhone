@@ -1,0 +1,53 @@
+<% @page_title = "Time Line - Mega Phone" %>
+
+  <div class="loging info">
+
+      Logged in as: <%= session[:username] %> with (lat,long) of (<%= session[:lat] %>,<%= session[:lon] %>)
+
+  </div>
+  <div class="logout">
+    <%= link_to("Logout", :controller =>'access', :action =>'logout') %>
+  </div>
+  <div class="editUser">
+    <%= link_to("Edit User", :controller =>'users', :action =>'edit', :id => session[:user_id]) %>
+  </div>
+  <div class="hotPage">
+    <%= link_to "<i class=\"fa fa-fire\">Hot Page</i>".html_safe, {:action => 'hot'}, class:"btn btn-danger" %>
+  </div>
+
+  <div class="container text-center tweet-creator">
+        <%= form_for(:tweet, :url => {:action => 'create'}) do |f| %>
+            <table summary="Subject form fields">
+                <tr>
+                  <td><%= f.text_field(:tweet, :placeholder => 'Your Message',:class => 'text-field') %></td>
+                </tr>
+              </table>
+
+          <%= button_tag(type: "submit", class: "submit-btn btn-primary") do %>
+           <i class="fa fa-paper-plane"></i>
+           <% end %>
+          <% end %>
+  </div>
+
+
+  <div class="container time-line">
+
+    <% @tweets.each do |tweet| %>
+
+
+        <div class="wrap">
+          <p class="tweet text-center">
+            <%= tweet.tweet %>
+          </p>
+        </div>
+
+          <% amp= tweet.amp %>
+
+            <%= link_to "<i class=\"fa fa-heart\">&nbsp;#{amp}</i>".html_safe, {:action => 'amplify', :id => tweet.id}, class:"btn btn-success amplify" %>
+
+        </br>
+    </tr>
+
+    <% end %>
+  </div>
+

@@ -1,0 +1,31 @@
+<% @page_title = "Hot Page - Mega Phone" %>
+  <div class="loging info">
+
+      Logged in as: <%= session[:username] %> with (lat,long) of (<%= session[:lat] %>,<%= session[:lon] %>)
+
+  </div>
+  <div class="logout">
+    <%= link_to("Logout", :controller =>'access', :action =>'logout') %>
+  </div>
+  <div class="sendTweet">
+    <%= link_to "<i class=\"fa fa-paper-plane\">Send a tweet</i>".html_safe, {:action => 'show'}, class:"btn btn-primary" %>
+  </div>
+  <div class="container time-line">
+
+    <% @tweets.each do |tweet| %>
+
+
+        <div class="wrap">
+          <p class="tweet text-center">
+            <%= tweet.tweet %>
+          </p>
+        </div>
+
+          <% amp= tweet.amp %>
+
+            <%= link_to "<i class=\"fa fa-heart\">&nbsp;#{amp}</i>".html_safe, {:action => 'amplify', :id => tweet.id}, class:"btn btn-success amplify" %>
+
+        </br>
+
+    <% end %>
+  </div>

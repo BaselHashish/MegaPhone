@@ -1,0 +1,51 @@
+<% @page_title = "Mega Phone" %>
+
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Amaranth:700' rel='stylesheet' type='text/css'>
+<header class="intro">
+  <div class="signup">
+    <%= link_to "Sign Up", {:controller => 'users',:action => 'new' }%>
+  </div>
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h1 class="brand-heading os-animation text-center" data-os-animation="fadeInDown" data-os-animation-delay="1s">Mega Phone</h1>
+          <div class="login container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <%= form_tag(:action => 'attempt_login') do %>
+              <table>
+                <tr>
+
+                  <td><%= text_field_tag(:username,nil,placeholder:'Username')%></td>
+                </tr>
+                <tr>
+
+                  <td><%= password_field_tag(:password,nil,placeholder:'Password') %></td>
+                </tr>
+                <tr class="lat">
+                  <td><%= label_tag(:lat) %></td>
+                  <td><%= text_field_tag(:lat) %></td>
+                </tr>
+                <tr class="lon">
+                  <td><%= label_tag(:lon) %></td>
+                  <td><%= text_field_tag(:lon) %></td>
+                </tr>
+                <tr>
+                  <td><%= submit_tag("Log In") %></td>
+                </tr>
+              </table>
+              <% end %>
+            </div>
+          </div>
+          </div>
+        </div> <!--col-->
+      </div> <!--row-->
+    </div> <!--container-->
+  </div>  <!--intro body-->
+</header>

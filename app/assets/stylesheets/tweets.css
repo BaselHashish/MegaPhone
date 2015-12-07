@@ -1,0 +1,95 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+body{
+  background: url(/assets/url5.jpg) repeat bottom center;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color:white;
+}
+.tweet-creator{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: transparent;
+}
+.text-field {
+  width: 500px;
+  height: 35px;
+  position: relative;
+  left: 300px;
+  background: transparent;
+}
+.submit-btn{
+  width: 35px;
+  height: 35px;
+  position: relative;
+  bottom: 35px;
+  left: 250px;
+}
+.time-line{
+
+}
+.wrap{
+  margin:10px;
+  	padding:0;
+  	width:800px;
+  	height:40px;
+  	border:1px solid rgba(0,0,0,0.5);
+  	border-radius:10px 10px 2px 2px;
+  	-webkit-box-shadow:
+  		0 2px 6px rgba(0,0,0,0.5),
+  		inset 0 1px rgba(255,255,255,0.3),
+  		inset 0 10px rgba(255,255,255,0.2),
+  		inset 0 10px 20px rgba(255,255,255,0.25),
+  		inset 0 -15px 30px rgba(0,0,0,0.3);
+  	-moz-box-shadow:
+  		0 2px 6px rgba(0,0,0,0.5),
+  		inset 0 1px rgba(255,255,255,0.3),
+  		inset 0 10px rgba(255,255,255,0.2),
+  		inset 0 10px 20px rgba(255,255,255,0.25),
+  		inset 0 -15px 30px rgba(0,0,0,0.3);
+  	box-shadow:
+  		0 2px 6px rgba(0,0,0,0.5),
+  		inset 0 1px rgba(255,255,255,0.3),
+  		inset 0 10px rgba(255,255,255,0.2),
+  		inset 0 10px 20px rgba(255,255,255,0.25),
+  		inset 0 -15px 30px rgba(0,0,0,0.3);
+  	background:rgba(0,0,0,0.25);
+}
+p{
+  color: rgb(230, 108, 92) !important;
+}
+.amplify{
+  position: relative;
+  left: 760px;
+  bottom:45px;
+}
+.logout{
+  position: relative;
+  left: 97%;
+  bottom:20px;
+}
+.editUser{
+  width: 500px;
+  position: relative;
+  left: 23%;
+  bottom: 40px;
+}
+.hotPage{
+  position: relative;
+  left: 47%;
+}
+.sendTweet{
+  position: relative;
+  left: 47%;
+  margin-bottom: 50px;
+}
+.time-line{
+  position: relative;
+  left: 180px;
+}

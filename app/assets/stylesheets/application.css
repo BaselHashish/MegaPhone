@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+
+ *= require bootstrap.min
+ *= require animate
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+ .lat{
+   visibility: collapse;
+ }
+ .lon{
+   visibility: collapse;
+ }
+ .message{
+     background-size: 40px 40px;
+     background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
+                         transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
+                         transparent 75%, transparent);
+      box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+      width: 100%;
+      border: 1px solid;
+      color: #fff;
+      padding: 15px;
+      position: fixed;
+      _position: absolute;
+      text-shadow: 0 1px 0 rgba(0,0,0,.5);
+      animation: animate-bg 5s linear infinite;
+ }
+ .error{
+     background-color: #de4343;
+     border-color: #c43d3d;
+}
+.success{
+     background-color: #61b832;
+     border-color: #55a12c;
+}
+@keyframes animate-bg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+       background-position: -80px 0;
+    }
+}
+#errorExplanation{
+  border: 1px solid #000;
+}
+#errorExplanation h2{
+  margin: 0px;
+}
+#errorExplanation ul{
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
