@@ -1,16 +1,11 @@
 <% @page_title = "Time Line - Mega Phone" %>
 
-  <div class="loging info">
-
+  <div class="logingInfo">
       Logged in as: <%= session[:username] %> with (lat,long) of (<%= session[:lat] %>,<%= session[:lon] %>)
+      <%= link_to("Edit User", :controller =>'users', :action =>'edit', :id => session[:user_id]) %>
 
   </div>
-  <div class="logout">
     <%= link_to("Logout", :controller =>'access', :action =>'logout') %>
-  </div>
-  <div class="editUser">
-    <%= link_to("Edit User", :controller =>'users', :action =>'edit', :id => session[:user_id]) %>
-  </div>
   <div class="hotPage">
     <%= link_to "<i class=\"fa fa-fire\">Hot Page</i>".html_safe, {:action => 'hot'}, class:"btn btn-danger" %>
   </div>
