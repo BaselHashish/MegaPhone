@@ -8,7 +8,7 @@
 <link href='https://fonts.googleapis.com/css?family=Amaranth:700' rel='stylesheet' type='text/css'>
 <header class="intro">
   <div class="signup">
-    <%= link_to "Sign Up", {:controller => 'users',:action => 'new' }%>
+    <%= link_to "<i class=\"fa fa-plus-square\">Sign Up</i>".html_safe, {:controller => 'users', :action => 'new'}, class:"btn btn-success" %>
   </div>
   <div class="intro-body">
     <div class="container">

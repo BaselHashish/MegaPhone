@@ -6,7 +6,6 @@
   font-family: Rissa;
   src: url(RissaTypeface.otf);
 }
-
 .login{
 	position: relative;
 	top: calc(50% - 75px);
@@ -190,7 +189,6 @@ a:focus {
     }
     .signup a{
       color: black;
-      background: transparent;
       text-align: left;
       vertical-align: text-top;
     }

@@ -2,7 +2,7 @@
 
 <%= error_messages_for(@user) %>
 <% @page_title = "New user" %>
-<%= link_to("Login", :controller =>'access', :action =>'login') %>
+  <%= link_to "<i>Login</i>".html_safe, {:controller =>'access', :action =>'login'}, class:"btn btn-primary" %>
 <div class="form-style-5">
   <%= form_for(:user, :url => {:action => 'create'}) do |f| %>
 
