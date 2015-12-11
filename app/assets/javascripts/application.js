@@ -44,7 +44,7 @@ $(document).ready(function(){
         showMessage(myMessages[i]);
         setTimeout(function() {
           $('.message').animate({top: -$('.message').outerHeight()}, 500);
-        }, 2000);
+        }, 3500);
      }
 
      // When message is clicked, hide it

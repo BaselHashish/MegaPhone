@@ -8,8 +8,15 @@ before_action :isAdmin , :only => [:index]
   end
 
   def show
+    unless session[:lat] == ''
     @tweetsFinder = Tweet.where("lat=? AND lon=?",session[:lat],session[:lon])
     @tweets = @tweetsFinder.sorted
+    else
+    flash[:error] = "The app didn't register your location"
+    session[:user_id] = nil
+    session[:username] = nil
+    redirect_to(:controller => "access", :action => 'login')
+    end
   end
 
   def hot
